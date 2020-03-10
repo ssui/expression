@@ -19,8 +19,8 @@ namespace Albatross.Expression.Operations {
 				throw new Exceptions.UnexpectedTypeException(type, b.GetType());
 			}
 			int result = 0;
-			if (type == typeof(double)) {
-				result = Comparer<double>.Default.Compare((double)a, (double)b);
+			if (type == typeof(decimal)) {
+				result = Comparer<decimal>.Default.Compare((decimal)a, (decimal)b);
 			} else if (type == typeof(DateTime)) {
 				result = Comparer<DateTime>.Default.Compare((DateTime)a, (DateTime)b);
 			} else if (type == typeof(String)) {

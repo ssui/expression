@@ -22,8 +22,8 @@ namespace Albatross.Expression.Operations {
 
 			if (type == null) {
 				return null;
-			}else if (type == typeof(double)) {
-				return GetMin<double>(items);
+			}else if (type == typeof(decimal)) {
+				return GetMin<decimal>(items);
 			} else if (type == typeof(DateTime)) {
 				return GetMin<DateTime>(items);
 			} else if (type == typeof(string)) {

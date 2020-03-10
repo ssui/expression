@@ -22,7 +22,7 @@ namespace Albatross.Expression.Operations {
 
 			if (value == null) {
 				return null;
-			} else if (value is double) {
+			} else if (value is decimal) {
 				return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(Convert.ToInt32(value));
 			} else {
 				throw new UnexpectedTypeException(value.GetType());

@@ -24,8 +24,8 @@ namespace Albatross.Expression.Operations {
 
 			if (type == null) {
 				return null;
-			} else if (type == typeof(double)) {
-				return GetMax<double>(list);
+			} else if (type == typeof(decimal)) {
+				return GetMax<decimal>(list);
 			} else if (type == typeof(DateTime)) {
 				return GetMax<DateTime>(list);
 			} else if (type == typeof(string)) {

@@ -13,10 +13,10 @@ namespace Albatross.Expression.Operations {
 	///		<listheader>
 	///		<description>Operands</description>
 	///		</listheader>
-	///		<item><description>Operrand1 : double</description></item>
-	///		<item><description>Operrand2 : double</description></item>
+	///		<item><description>Operrand1 : decimal</description></item>
+	///		<item><description>Operrand2 : decimal</description></item>
 	/// </list>
-	/// <para>Output Type: double</para>
+	/// <para>Output Type: decimal</para>
 	/// </summary>
 	[ParserOperation]
 	public class Plus : InfixOperationToken {
@@ -31,10 +31,10 @@ namespace Albatross.Expression.Operations {
 
 			if (a == null || b == null) { return null; }
 			
-			if (a is double && b is double) {
-				return (double)a + (double)b;
-			}else if(a is DateTime && b is double){
-				return ((DateTime)a).AddDays((double)b);
+			if (a is decimal && b is decimal) {
+				return (decimal)a + (decimal)b;
+			}else if(a is DateTime && b is decimal){
+				return ((DateTime)a).AddDays(Convert.ToDouble(b));
 			}else if(a is string || b is string){
 				return string.Format("{0}{1}", a, b);
 			} else {

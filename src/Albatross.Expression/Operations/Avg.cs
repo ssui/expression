@@ -13,7 +13,7 @@ namespace Albatross.Expression.Operations {
 	/// <para>Prefix operation that return the average of a set of numbers</para>
 	/// <para>Operand Count: 0 to infinite</para>
 	/// <para>Operand Type: number, if the operand count is 1, it can be an array</para>
-	/// <para>Output Type: double</para>
+	/// <para>Output Type: decimal</para>
 	/// 
 	/// <para>Usage: avg(1, 2, 3, 4, 5) or avg(@(1, 2, 3, 4, 5))</para>
 	/// <para>Note: null value will not be counted, therefore avg(null, 2, 2, 2) should be 6/3 = 2 not 6/4 = 1.5;  It will return null if the count is 0.</para>
@@ -31,13 +31,13 @@ namespace Albatross.Expression.Operations {
 			Type type;
 			IEnumerable items = GetParamsOperands(context, out type);
 			
-			double sum = 0;
+			decimal sum = 0;
 			int count = 0;
 
 			try {
-				foreach (double? item in items) {
+				foreach (decimal? item in items) {
 					if (item != null) {
-						sum += (double)item;
+						sum += (decimal)item;
 						count++;
 					}
 				}

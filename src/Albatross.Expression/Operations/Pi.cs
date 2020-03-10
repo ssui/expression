@@ -16,7 +16,7 @@ namespace Albatross.Expression.Operations {
 		public override bool Symbolic { get { return false; } }
 
 		public override object EvalValue(Func<string, object> context) {
-			return Math.PI;
+			return Convert.ToDecimal(Math.PI);
 		}
 	}
 }

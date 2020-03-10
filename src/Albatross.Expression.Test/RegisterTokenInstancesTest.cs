@@ -20,7 +20,7 @@ namespace Albatross.Expression.Test
 			var ctx = new ExecutionContext<object>(parser, false, false, false, null);
 
 			//Act
-			var retval = (double)ctx.Eval("MyToken(1)", null);
+			var retval = (decimal)ctx.Eval("MyToken(1)", null);
 
 			//Assert
 			Assert.AreEqual(1, retval);

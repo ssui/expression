@@ -17,7 +17,7 @@ namespace Albatross.Expression.Operations {
 		public override object EvalValue(Func<string, object> context) {
 			object a = Operands.First().EvalValue(context);
 
-			if(a == null || a is double) { return a; }
+			if(a == null || a is decimal) { return a; }
 			throw new Exceptions.UnexpectedTypeException(a.GetType());
 		}
 	}

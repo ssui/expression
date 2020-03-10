@@ -15,8 +15,8 @@ namespace Albatross.Expression.Sample {
 		public override string Name => "custom_sin";
 		public override bool Symbolic => false;
 		public override object EvalValue(Func<string, object> context) {
-			double input = base.GetOperands<double>(context).First<double>();
-			return Math.Sin(input);
+			decimal input = base.GetOperands<decimal>(context).First<decimal>();
+			return Convert.ToDecimal(Math.Sin(Convert.ToDouble(input)));
 		}
 	}
 
@@ -31,8 +31,8 @@ namespace Albatross.Expression.Sample {
 
 		public override object EvalValue(Func<string, object> context) {
 			if (Operands.Count == 0) { return null; }
-			var items = GetOperands<double>(context);
-			double max = items.First();
+			var items = GetOperands<decimal>(context);
+			decimal max = items.First();
 			foreach (var item in items) {
 				if (max < Math.Abs(item)) {
 					max = Math.Abs(item);

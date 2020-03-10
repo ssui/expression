@@ -17,8 +17,8 @@ namespace Albatross.Expression.Operations {
 		public override object EvalValue(Func<string, object> context) {
 			object a = Operands.First().EvalValue(context);
 
-			if(a is double){
-				return (double)a * -1;
+			if(a is decimal){
+				return (decimal)a * -1;
 			}
 			throw new FormatException();
 		}

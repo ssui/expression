@@ -44,8 +44,8 @@ namespace Albatross.Expression.Tokens {
 		}
 
 		public object EvalValue(Func<string, object> context) {
-			double d;
-			if (double.TryParse(Name, out d)) {
+			decimal d;
+			if (decimal.TryParse(Name, out d)) {
 				return d;
 			} else {
 				throw new FormatException();

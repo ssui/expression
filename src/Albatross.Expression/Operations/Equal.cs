@@ -13,10 +13,10 @@ namespace Albatross.Expression.Operations {
 	///		<listheader>
 	///		<description>Operands</description>
 	///		</listheader>
-	///		<item><description>Operrand1 : double</description></item>
-	///		<item><description>Operrand2 : double</description></item>
+	///		<item><description>Operrand1 : decimal</description></item>
+	///		<item><description>Operrand2 : decimal</description></item>
 	/// </list>
-	/// <para>Output Type: double</para>
+	/// <para>Output Type: decimal</para>
 	/// </summary>
 	[ParserOperation]
 	public class Equal : ComparisonInfixOperation {
