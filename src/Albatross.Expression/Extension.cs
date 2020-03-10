@@ -10,8 +10,8 @@ namespace Albatross.Expression {
 	public static class Extensions {
 		public static bool ConvertToBoolean(this object obj) {
 			if (obj != null) {
-				if (obj is double) {
-					return (double)obj != 0;
+				if (obj is decimal) {
+					return (decimal)obj != 0;
 				} else if (obj is bool) {
 					return (bool)obj;
 				} else {

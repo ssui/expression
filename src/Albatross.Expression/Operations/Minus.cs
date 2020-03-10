@@ -20,9 +20,9 @@ namespace Albatross.Expression.Operations {
 
 			if (a == null || b == null) {
 				return null;
-			}else if(a is double && b is double){
-				return (double)a - (double)b;
-			}else if(a is DateTime && b is double){
+			}else if(a is decimal && b is decimal){
+				return (decimal)a - (decimal)b;
+			}else if(a is DateTime && b is decimal){
 				return ((DateTime)a).AddDays(-1 * Convert.ToDouble(b));
 			} else {
 				throw new UnexpectedTypeException(a.GetType());

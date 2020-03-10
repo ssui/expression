@@ -13,10 +13,10 @@ namespace Albatross.Expression.Operations {
 	///		<listheader>
 	///		<description>Operands</description>
 	///		</listheader>
-	///		<item><description>base : double</description></item>
-	///		<item><description>operand : double</description></item>
+	///		<item><description>base : decimal</description></item>
+	///		<item><description>operand : decimal</description></item>
 	/// </list>
-	/// <para>Output Type: double</para>
+	/// <para>Output Type: decimal</para>
 	/// </summary>
 	[ParserOperation]
 	public class Power : InfixOperationToken {
@@ -31,8 +31,8 @@ namespace Albatross.Expression.Operations {
 
 			if (a == null || b == null) { return null; }
 
-			if(a is double && b is double){
-				return Math.Pow((double)a, (double)b);
+			if(a is decimal && b is decimal){
+				return Convert.ToDecimal(Math.Pow(Convert.ToDouble(a), Convert.ToDouble(b)));
 			} else {
 				throw new Exceptions.UnexpectedTypeException(a.GetType());
 			}

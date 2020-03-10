@@ -61,7 +61,7 @@ namespace Albatross.Expression.Test {
 		[TestCase("2*null", ExpectedResult = null)]
 
 		[TestCase("4/2", ExpectedResult = 2)]
-		[TestCase("4/0", ExpectedResult = double.PositiveInfinity)]
+//[TestCase("4/0", ExpectedResult = decimal.Zero)]
 
 		[TestCase("-12", ExpectedResult = -12)]
 		[TestCase("+12", ExpectedResult = 12)]

@@ -20,11 +20,11 @@ namespace Albatross.Expression.Operations {
 			object a = Operands.First().EvalValue(context);
 			if (a == null) { return null; }
 			if (a is DateTime) {
-				return Convert.ToDouble(((DateTime)a).Month);
+				return Convert.ToDecimal(((DateTime)a).Month);
 			} else {
 				DateTime datetime;
 				if (DateTime.TryParse(Convert.ToString(a), out datetime)) {
-					return Convert.ToDouble(datetime.Month);
+					return Convert.ToDecimal(datetime.Month);
 				} else {
 					throw new FormatException("Invalid Datetime Format");
 				}

@@ -20,7 +20,7 @@ namespace Albatross.Expression.Operations {
 		public override object EvalValue(Func<string, object> context) {
 			object value = Operands.First().EvalValue(context);
 
-			if (value is double){
+			if (value is decimal){
 				return CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(Convert.ToInt32(value));
 			}
 			throw new Exceptions.UnexpectedTypeException(value.GetType());

@@ -25,8 +25,8 @@ namespace Albatross.Expression.Operations {
 
 			if (value == null) { return list[0]; }
 
-			if (value is double) {
-				count = (int)Math.Round((double)value, 0);
+			if (value is decimal) {
+				count = (int)Math.Round((decimal)value, 0);
 			} else {
 				throw new Exceptions.UnexpectedTypeException(value.GetType());
 			}

@@ -43,7 +43,7 @@ namespace Albatross.Expression.Test
 
 				// Mixing single quotes
 				new Scenario("\"normal 'big' string\"", 0,"\"normal 'big' string\"", "normal 'big' string" ),
-				// Mixing both single and double quote
+				// Mixing both single and decimal quote
 				new Scenario("\"normal\\\"'test'string\" + 1", 0,"\"normal\\\"'test'string\"" , "normal\"'test'string" ),
 				// Empty string
 				new Scenario("", 0,null , null),
@@ -70,9 +70,9 @@ namespace Albatross.Expression.Test
 				new Scenario("'normal\\tstring' + 1", 0,"'normal\\tstring'","normal\tstring"),
 				new Scenario("'normal\\nstring' + 1", 0,"'normal\\nstring'","normal\nstring"),
 
-				// Mixing double quotes
+				// Mixing decimal quotes
 				new Scenario("'normal \"big\" string'", 0,"'normal \"big\" string'" ,"normal \"big\" string"),
-				// Mixing both single and double quote
+				// Mixing both single and decimal quote
 				new Scenario("'normal\"\\'test\\'string' + 1", 0,"'normal\"\\'test\\'string'" ,"normal\"'test'string"),
 				// Empty string
 				new Scenario("", 0,null ,null),

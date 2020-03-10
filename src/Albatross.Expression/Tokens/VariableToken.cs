@@ -76,7 +76,7 @@ namespace Albatross.Expression.Tokens {
 			if (context != null){
 				value = context(Name);
 				if (value is int || value is float || value is long || value is short || value is uint || value is decimal || value is ushort || value is ulong) {
-					value = Convert.ToDouble(value);
+					value = Convert.ToDecimal(value);
 				}
 				return value;
 			} else {

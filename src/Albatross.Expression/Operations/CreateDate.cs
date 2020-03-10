@@ -13,9 +13,9 @@ namespace Albatross.Expression.Operations {
 	///		<listheader>
 	///		<description>Operands</description>
 	///		</listheader>
-	///		<item><description>year : double</description></item>
-	///		<item><description>month : double</description></item>
-	///		<item><description>day : double</description></item>
+	///		<item><description>year : decimal</description></item>
+	///		<item><description>month : decimal</description></item>
+	///		<item><description>day : decimal</description></item>
 	/// </list>
 	/// <para>Operand Type: int</para>
 	/// <para>Output Type: System.DateTime</para>
